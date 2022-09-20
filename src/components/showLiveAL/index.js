@@ -5,7 +5,7 @@ export default function ShowLiveAL() {
   const [alerts, setAlerts] = useState([]);
   const parentAlerts = useRef();
   const addAlerts = () => {
-    setAlerts([ ...alerts, <AlertCP status={"success"}> Nice, you triggered this alert message! </AlertCP>,]);
+    setAlerts([ ...alerts, <AlertCP colors={"success"}> Nice, you triggered this alert message! </AlertCP>,]);
   };
   return (
     <>
