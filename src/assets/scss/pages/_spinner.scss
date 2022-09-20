@@ -1,0 +1,111 @@
+.spinner-border {
+  display: inline-block;
+  @include pxRem(width, 32);
+  @include pxRem(height, 32);
+  border: 4px solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  @include pxRem(margin-right, 20);
+
+  &.spinner-border-sm {
+    @include pxRem(width, 20);
+    @include pxRem(height, 20);
+    @include pxRem(margin-right, 10);
+  }
+
+  &.spinner-border-lg {
+    @include pxRem(width, 50);
+    @include pxRem(height, 50);
+    @include pxRem(margin-right, 10);
+  }
+}
+
+@keyframes spinner-border {
+  from {}
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.growing-spinner {
+  @include pxRem(margin-top, 30);
+}
+
+.flex-spinner {
+  @include pxRem(margin-top, 30);
+
+  span {
+    @include pxRem(font-size, 16);
+  }
+}
+
+.size-spinner {
+  @include pxRem(margin-top, 30);
+}
+
+.button-spinner {
+  @include pxRem(margin-top, 30);
+}
+
+.spinner-grow {
+  display: inline-block;
+  @include pxRem(width, 32);
+  @include pxRem(height, 32);
+  background-color: currentColor;
+  border-radius: 50%;
+  animation: spinner-grow 0.6s linear infinite;
+  @include pxRem(margin-right, 20);
+
+  &.spinner-grow-sm {
+    @include pxRem(width, 20);
+    @include pxRem(height, 20);
+  }
+
+  &.spinner-grow-lg {
+    @include pxRem(width, 50);
+    @include pxRem(height, 50);
+  }
+}
+
+@keyframes spinner-grow {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.clear-fix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.float-end {
+  float: right;
+}
+
+.btn-spinner-small {
+  @include pxRem(padding, 5 10);
+  @include pxRem(margin-right, 20);
+
+  .spinner-grow-sm {
+    margin-right: 0;
+  }
+
+  .spinner-border-sm {
+    margin-right: 0;
+  }
+}

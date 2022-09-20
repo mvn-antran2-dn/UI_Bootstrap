@@ -1,0 +1,195 @@
+.disabled {
+  @include pxRem(font-size, 18);
+}
+
+.nav {
+  .nav-item {
+    @include pxRem(margin-right, 10);
+
+    .nav-link:not(.disabled) {
+      color: map-get($colors, primary-color);
+      @include pxRem(font-size, 18);
+
+      &:hover {
+        color: map-get($colors, primary-text-color);
+      }
+    }
+  }
+}
+
+.nav {
+  .nav-link:not(.disabled) {
+    @include pxRem(margin-right, 10);
+    color: map-get($colors, primary-color);
+    @include pxRem(font-size, 18);
+
+    &:hover {
+      color: map-get($colors, primary-text-color);
+    }
+  }
+}
+
+.base-nav-div {
+  @include pxRem(margin-top, 30);
+}
+
+.vertical {
+  .nav {
+    flex-direction: column;
+  }
+}
+
+.vertical-ul {
+  @include pxRem(margin-top, 30);
+}
+
+.nav-tabs {
+  border-bottom: 1px solid map-get($colors, secondary-bland-color);
+
+  .nav-item {
+    margin-right: 0;
+
+    a {
+      @include pxRem(font-size, 18);
+      @include pxRem(padding, 5 10);
+    }
+
+    .active.bg-primary {
+      background-color: map-get($colors, color-background);
+      color: map-get($colors, secondary-color);
+      border: 1px solid map-get($colors, secondary-bland-color);
+      border-bottom: 1px solid map-get($colors, color-background);
+
+      &:hover {
+        background-color: map-get($colors, color-background);
+        color: map-get($colors, secondary-color);
+      }
+    }
+  }
+
+  .nav-link:not(.disabled) {
+    margin-right: 0;
+  }
+
+  .bg-link {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: unset;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border: 1px solid map-get($colors, secondary-bland-color);
+    }
+  }
+}
+
+.nav-pills {
+  .nav-item {
+    margin-right: 0;
+
+    a {
+      @include pxRem(font-size, 18);
+      @include pxRem(padding, 5 10);
+    }
+
+    .active.bg-primary {
+      color: map-get($colors, color-background);
+      @include pxRem(border-radius, 5);
+
+      &:hover {
+        background-color: map-get($colors, primary-color);
+        color: map-get($colors, color-background);
+      }
+    }
+  }
+
+  .nav-link:not(.disabled) {
+    margin-right: 0;
+  }
+
+  .bg-link {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: unset;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+}
+
+.nav-fill {
+  justify-content: space-between;
+
+  .nav-item {
+    width: 25%;
+    text-align: center;
+
+    .nav-link {
+      width: 100%;
+    }
+
+    .active.bg-primary {
+      @include pxRem(padding, 4 66);
+
+      &:hover {
+        background-color: map-get($colors, primary-color);
+        color: map-get($colors, color-background);
+      }
+    }
+  }
+}
+
+.fill-nav {
+  @include pxRem(margin-top, 30);
+
+  .nav-link {
+    width: 25%;
+    text-align: center;
+  }
+
+  .active.bg-primary {
+    @include pxRem(border-radius, 5);
+    color: map-get($colors, color-background);
+    width: 16.5%;
+    @include pxRem(margin, 0 46);
+
+    &:hover {
+      background-color: map-get($colors, primary-color);
+      color: map-get($colors, color-background);
+    }
+  }
+}
+
+.justify {
+  @include pxRem(margin-top, 30);
+
+  .nav-item {
+    width: 25%;
+    text-align: center;
+
+    .nav-link {
+      width: 100%;
+    }
+  }
+
+  .bg-primary {
+    @include pxRem(border-radius, 5);
+
+    &:hover {
+      background-color: map-get($colors, primary-color);
+      color: map-get($colors, color-background);
+    }
+  }
+}
+
+.flex-utilities {
+  .nav-link {
+    @include pxRem(padding, 0 66);
+  }
+
+  .active.bg-primary {
+    @include pxRem(border-radius, 5);
+    color: map-get($colors, color-background);
+
+    &:hover {
+      background-color: map-get($colors, primary-color);
+      color: map-get($colors, color-background);
+    }
+  }
+}

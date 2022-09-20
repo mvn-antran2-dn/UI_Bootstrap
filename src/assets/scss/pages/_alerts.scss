@@ -1,0 +1,67 @@
+.alert {
+  @include pxRem(font-size, 16);
+  @include pxRem(padding, 16);
+  @include pxRem(margin, 16 0);
+  @include pxRem(border-radius, 6);
+  @include pxRem(border, 1 solid);
+
+  .alert-link {
+    color: currentColor;
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover {
+      color: currentColor;
+      text-decoration: underline;
+    }
+  }
+
+  .alert-heading {
+    @include pxRem(font-size, 28);
+    @include pxRem(margin-bottom, 8);
+    color: currentColor;
+  }
+
+  hr {
+    @include pxRem(margin, 16 0);
+    @include pxRem(height, 1);
+    border: 0;
+    background-color: currentColor;
+    opacity: 0.3;
+  }
+
+  strong {
+    font-weight: map-get($font-weight, font-medium);
+  }
+}
+
+.dismissing {
+  .alert {
+    display: flex;
+    justify-content: space-between;
+
+    .btn-close {
+      background-color: map-get($colors, warning-bland-color);
+      color: map-get($colors, warning-text-color);
+    }
+  }
+}
+
+.show-live-al {
+  @include pxRem(margin-top, 30);
+
+  .alert {
+    display: flex;
+    justify-content: space-between;
+
+    .btn-close {
+      background-color: map-get($colors, success-bland-color);
+      color: map-get($colors, success-text-color);
+    }
+  }
+
+  .btn-show-live-AL {
+    @include pxRem(margin, 10 0);
+    @include pxRem(padding, 4 10);
+  }
+}

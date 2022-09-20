@@ -1,0 +1,62 @@
+.placeholder {
+  display: inline-block;
+  @include pxRem(min-height, 16);
+  vertical-align: middle;
+  cursor: wait;
+  background-color: currentColor;
+  opacity: 0.5;
+
+  &.placeholder-lg {
+    @include pxRem(min-height, 29);
+  }
+
+  &.placeholder-sm {
+    @include pxRem(min-height, 13);
+  }
+
+  &.placeholder-xs {
+    @include pxRem(min-height, 9);
+  }
+}
+
+.placeholder-glow {
+  .placeholder {
+    animation: placeholder-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes placeholder-glow {
+  0% {
+    opacity: 0.5;
+  }
+
+  25% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  75% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.mr-1 {
+  @include pxRem(margin-right, 3);
+}
+
+.btn-pla-ex {
+  @include pxRem(padding, 0 58);
+  @include pxRem(font-size, 15);
+}
+
+.btn-pla-work {
+  @include pxRem(padding, 0 120);
+  @include pxRem(margin-top, 10);
+}

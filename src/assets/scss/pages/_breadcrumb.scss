@@ -1,0 +1,57 @@
+.breadcrumb {
+  .breadcrumb-item:not(.active) {
+    &::after {
+      content: '/';
+      @include pxRem(margin, 0 10);
+    }
+
+    a {
+      color: map-get($colors, bs-primary);
+      text-decoration: revert;
+
+      &:hover {
+        color: map-get($colors, bs-blue);
+      }
+    }
+  }
+
+  .breadcrumb-item {
+    @include pxRem(font-size, 16);
+    color: map-get($colors, bs-gray);
+  }
+}
+
+.breadcrumb-divi-top {
+  .breadcrumb-item:not(.active) {
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      content: '\f054';
+      @include pxRem(margin, 0 10);
+    }
+  }
+}
+
+.breadcrumb-divi-middle {
+  .breadcrumb-item:not(.active) {
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f105';
+      @include pxRem(margin, 0 10);
+    }
+  }
+}
+
+.breadcrumb-divi-bottom {
+  .breadcrumb-item:not(.active) {
+    &::after {
+      content: ' ';
+      @include pxRem(margin, 0 10);
+    }
+  }
+}
+
+.breadcrumb-divi {
+  @include pxRem(margin, 50 0);
+}

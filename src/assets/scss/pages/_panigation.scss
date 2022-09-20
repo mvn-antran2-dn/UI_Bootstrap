@@ -1,0 +1,69 @@
+.pagination {
+  display: flex;
+
+  .page-item {
+    border: 1px solid map-get($colors, color-border);
+
+    &:hover:not(.disabled) {
+      background-color: map-get($colors, bs-gray-200);
+    }
+
+    .page-link {
+      @include pxRem(padding, 2 10);
+      color: map-get($colors, primary-color);
+      @include pxRem(font-size, 16);
+    }
+
+    .disabled {
+      color: map-get($colors, secondary-color);
+      opacity: 1;
+    }
+
+    .active {
+      color: map-get($colors, color-background);
+      pointer-events: none;
+    }
+
+    &:first-child {
+      @include pxRem(border-top-left-radius, 4);
+      @include pxRem(border-bottom-left-radius, 4);
+    }
+
+    &:last-child {
+      @include pxRem(border-top-right-radius, 4);
+      @include pxRem(border-bottom-right-radius, 4);
+    }
+  }
+
+  .disabled {
+    color: map-get($colors, secondary-color);
+    opacity: 1;
+  }
+
+  .active {
+    background-color: map-get($colors, primary-color);
+    border: unset;
+    pointer-events: none;
+  }
+
+  &.pagination-lg {
+    .page-item {
+      @include pxRem(padding, 12 24);
+
+      .page-link {
+        @include pxRem(font-size, 20);
+      }
+    }
+  }
+
+  &.pagination-sm {
+    .page-link {
+      @include pxRem(padding, 4 8);
+      @include pxRem(font-size, 13);
+    }
+  }
+}
+
+.alignment {
+  @include pxRem(margin-top, 30);
+}

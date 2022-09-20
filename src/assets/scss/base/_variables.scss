@@ -1,0 +1,147 @@
+// === Font === //
+$font-body: "Jost", sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  font-manh: 100,
+  font-bland: 300,
+  font-normal: 400,
+  font-regular: 500,
+  font-medium: 600,
+  font-bold: 700,
+  font-verybold: 800,
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px,
+);
+
+// === Colors === //
+$colors: (
+  color-background: #fff,
+  color-background-light: #fafafa,
+  color-background-gray:#fdf8f7,
+  color-background-yellor:#f4dfa3,
+  color-background-red:#fbf1ec,
+  color-background-countitem: #eff0f3,
+  color-text: #000,
+  color-text-desc: #75767c,
+  color-primary: #ee403d,
+  color-success: #47b486,
+  color-success-dark: #287c58,
+  color-success-light: #c9e3d8,
+  color-warning: #f5af28,
+  color-warning-light: #f4e3d1,
+  color-danger: #f71c04,
+  color-info: #aeb9be,
+  color-border: #dee0ea,
+  color-form-border: #ddd,
+  color-form-active: #8f8f8f,
+  color-form-placeholder: #75767c,
+  color-border-discount: #dee0ea,
+  color-start: #f9c300,
+  color-review:#f0f0f4,
+  bs-blue: #0b5ed7,
+  bs-indigo: #6610f2,
+  bs-purple: #6f42c1,
+  bs-pink: #d63384,
+  bs-red: #dc3545,
+  bs-orange: #fd7e14,
+  bs-yellow: #ffc107,
+  bs-green: #198754,
+  bs-teal: #20c997,
+  bs-cyan: #e3f2fd,
+  bs-white: #fff,
+  bs-gray: #6c757d,
+  bs-gray-dark: #343a40,
+  bs-gray-100: #f8f9fa,
+  bs-gray-200: #e9ecef,
+  bs-gray-300: #dee2e6,
+  bs-gray-400: #ced4da,
+  bs-gray-500: #adb5bd,
+  bs-gray-600: #6c757d,
+  bs-gray-700: #495057,
+  bs-gray-800: #343a40,
+  bs-gray-900: #212529,
+  bs-primary: #116df6,
+  bs-secondary: #a6a7ac,
+  bs-success: #198754,
+  bs-info: #0dcaf0,
+  bs-warning: #ffc107,
+  bs-danger: #dc3545,
+  bs-light: #f8f9fa,
+  bs-dark: #212529,
+  bs-border-white:#e8dbd5,
+  // color
+  primary-color: #0d6efd,
+  primary-color-hover: #0a58ca,
+  secondary-color: #6c757d,
+  success-color: #3b8755,
+  danger-color: #dc3545,
+  warning-color: #f8c146,
+  info-color: #53cbf0,
+  light-color: #f8f9fa,
+  dark-color: #212529,
+  //color bland
+  primary-bland-color: #cfe2ff,
+  secondary-bland-color: #e2e3e5,
+  success-bland-color: #d1e7dd,
+  danger-bland-color: #f8d7da,
+  warning-bland-color: #fff3cd,
+  info-bland-color: #cff4fc,
+  light-bland-color: #fefefe,
+  dark-bland-color: #d3d3d4,
+  //color text
+  primary-text-color: #084298,
+  secondary-text-color: #41464b,
+  success-text-color: #0f5132,
+  danger-text-color: #842029,
+  warning-text-color: #664d03,
+  info-text-color: #055160,
+  light-text-color: #636464,
+  dark-text-color: #141619,
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070,
+  all: 99,
+  feature: 200,
+  shink: 2000,
+  total: 10,
+  total1: 11,
+  total2: 12,
+  people: 11,
+  active: 1000,
+  button: 1000,
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base,
+);
+
+$heights: (
+  hero-height: 860px,
+  hero-height1: 750px,
+);

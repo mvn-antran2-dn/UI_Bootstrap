@@ -1,0 +1,80 @@
+.btn {
+  // @include pxRem(padding, 8 16);
+  // @include pxRem(border-radius, 5);
+  // @include pxRem(font-size, 18);
+  // @include pxRem(height, 40);
+  font-family: inherit;
+  background: map-get($colors, primary);
+  color: map-get($colors, white);
+  line-height: 1;
+  cursor: pointer;
+  transition: background 400ms ease;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+    color: map-get($colors, txt-disabled);
+    border-color: map-get($colors, txt-disabled);
+    background: map-get($colors, bg-gray-light);
+  }
+  @include pxRem(border-radius, 5);
+  @include pxRem(font-size, 18);
+  @include pxRem(height, 50);
+  @include pxRem(line-height, 45);
+  @include pxRem(padding, 0 45);
+  font-weight: map-get($font-weight, bold);
+  border: #{f-pxRem(2)} solid map-get($colors, primary);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, white);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  &:hover {
+    color: map-get($colors, primary);
+    &::after {
+      transform: skewX(45deg) scale(1, 1);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: map-get($colors, white);
+    width: 150%;
+    height: 150%;
+    transform: skewX(45deg) scale(0, 1);
+    transition: all 0.5s ease 0s;
+    left: -20%;
+    right: -20%;
+    top: -4%;
+    z-index: -1;
+  }
+}
+.btn-all{
+  @include pxRem(padding, 0 8 );
+  @include pxRem(border-radius, 3);
+  border: unset;
+  @include pxRem(font-size, 15);
+  &:disabled{
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}
+.btn-lg{
+  @include pxRem(font-size, 18 !important);
+}
+.btn-sm{
+  @include pxRem(font-size, 13 !important);
+}
+.disabled{
+  opacity: 0.65;
+  pointer-events: none;
+}

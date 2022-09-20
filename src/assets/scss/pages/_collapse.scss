@@ -1,0 +1,61 @@
+.collapse-all {
+  a.btn-all {
+    @include pxRem(padding, 4 10);
+    @include pxRem(margin-right, 10);
+
+    &:hover {
+      color: map-get($colors, color-background);
+    }
+  }
+
+  .btn-all {
+    @include pxRem(margin-right, 10);
+  }
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  overflow-y: auto;
+  @include pxRem(margin-right, 20);
+
+  &.show-collapse {
+    @include pxRem(height, 100);
+    @include pxRem(margin-right, 20);
+  }
+
+  .card {
+    width: 100%;
+    @include pxRem(padding, 10);
+    @include pxRem(font-size, 16);
+    @include pxRem(padding, 10);
+    @include pxRem(margin-top, 10);
+  }
+}
+
+.collapse-horizontal {
+  .card.card-body {
+    width: 0;
+    opacity: 0;
+    transition: opacity linear 0.3s, width linear 0.3s;
+  }
+
+  &.show-collapse {
+    .card.card-body {
+      @include pxRem(width, 400);
+      opacity: 1;
+    }
+  }
+
+  .card {
+    @include pxRem(height, 90);
+    overflow-y: hidden;
+    @include pxRem(padding, 10);
+    @include pxRem(font-size, 16);
+    @include pxRem(padding, 10);
+    @include pxRem(margin-top, 10);
+    line-height: 1.5;
+  }
+}

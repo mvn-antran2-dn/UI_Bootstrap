@@ -1,0 +1,73 @@
+.offcanvas {
+  position: fixed;
+  background-color: map-get($map: $colors, $key: color-background);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include pxRem(padding, 16);
+  border: 1px solid map-get($map: $colors, $key: secondary-color);
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
+
+  &.show-canvas {
+    visibility: visible;
+    z-index: 3;
+    transform: translate(0);
+  }
+
+  .btn-close::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    @include pxRem(font-size, 25);
+  }
+
+  h5 {
+    @include pxRem(font-size, 25);
+    font-weight: map-get($map: $font-weight, $key: font-regular);
+  }
+}
+
+.offcanvas-start {
+  width: 30%;
+  transform: translateX(-100%);
+}
+
+.offcanvas-top {
+  top: 0;
+  left: 0;
+  height: 30%;
+  transform: translateY(-100%);
+}
+
+.offcanvas-end {
+  top: 0;
+  right: 0;
+  left: 70%;
+  width: 30%;
+  transform: translateX(100%);
+}
+
+.offcanvas-bottom {
+  bottom: 0;
+  top: 70%;
+  left: 0;
+  height: 30%;
+  transform: translateY(100%);
+}
+
+.offcanvas-backcanvas {
+  visibility: hidden;
+  position: fixed;
+  background-color: map-get($map: $colors, $key: dark-color);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+
+  &.show-canvas {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,29 @@
+.btn-close {
+  background-color: map-get($colors, color-background);
+  border: unset;
+  color: map-get($colors, bs-gray-500);
+  @include pxRem(font-size, 20);
+
+  &:hover {
+    color: map-get($colors, secondary-text-color);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+.white-variant {
+  background-color: map-get($colors, dark-color);
+
+}
+
+.btn-close-white {
+  background-color: map-get($colors, dark-color);
+  color: map-get($colors, bs-gray-500);
+
+  &:hover {
+    color: map-get($colors, secondary-bland-color);
+  }
+}

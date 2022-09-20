@@ -1,0 +1,525 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+  @include pxRem(font-size, 16);
+  @include pxRem(margin-right, 10);
+
+  .dropdown-menu {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+
+    .dropdown-item button {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+      width: 100%;
+      background-color: map-get($colors, color-background);
+      border: unset;
+      text-align: left;
+
+      &:hover {
+        background-color: map-get($colors, bs-gray-200);
+        color: map-get($colors, color-text);
+      }
+    }
+  }
+
+  .dropdown-menu-up {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, -147);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-split-menu-up {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, -147);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-menu-right {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, 0);
+    @include pxRem(right, -171);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-split-menu-right {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, 0);
+    @include pxRem(right, -171);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-menu-left {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, 0);
+    @include pxRem(left, -171);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-split-menu-left {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+    @include pxRem(top, 0);
+    @include pxRem(left, -171);
+
+    .dropdown-item a {
+      @include pxRem(font-size, 16);
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .dropdown-menu-end {
+    right: 0;
+  }
+
+  .btn-all {
+    @include pxRem(font-size, 17);
+    @include pxRem(padding, 5 10);
+
+    &.down::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0d7";
+      @include pxRem(margin-left, 17);
+    }
+
+    &.up::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0d8";
+      @include pxRem(margin-left, 17);
+    }
+
+    &.left::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0d9";
+      @include pxRem(margin-right, 10);
+    }
+
+    &.right::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0da";
+      @include pxRem(margin-left, 17);
+    }
+  }
+
+  a.btn-all {
+    &:hover {
+      color: map-get($colors, color-background);
+    }
+  }
+
+  //menu
+  //split-menu
+  .dropdown-split-menu {
+    position: absolute;
+    background-color: map-get($colors, color-background);
+    z-index: 2;
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(min-width, 170);
+    @include pxRem(padding, 5 0);
+
+    .dropdown-item a {
+      @include pxRem(padding, 5 10);
+
+      &:hover {
+        color: map-get($colors, color-text);
+      }
+    }
+
+    .dropdown-item:nth-child(4) {
+      @include pxRem(padding, 5 0 0);
+      border-top: 1px solid map-get($colors, color-border)
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+
+  .btn-group {
+    button:first-child {
+      border-radius: unset;
+      @include pxRem(border-bottom-left-radius, 4);
+      @include pxRem(border-top-left-radius, 4);
+    }
+  }
+
+  .dropdown-toggle-split.down {
+    border-radius: 0;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  .dropdown-toggle-split.right {
+    border-radius: 0;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  .dropdown-toggle-split.up {
+    border-radius: 0;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  .dropdown-toggle-split.left {
+    border-radius: 0;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  //menu dark
+  .dropdown-menu-dark {
+    background-color: map-get($colors, bs-gray-dark);
+
+    .dropdown-item a {
+      @include pxRem(padding, 5 10);
+      color: map-get($colors, color-background);
+
+      &:hover {
+        color: map-get($colors, color-background);
+      }
+    }
+
+    .dropdown-item:hover {
+      background-color: map-get($colors, bs-gray-700);
+    }
+
+    .dropdown-item:first-child {
+      background-color: map-get($colors, primary-color);
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.dropdown-large {
+  .dropdown {
+    @include pxRem(margin-right, 10);
+
+    .btn-all {
+      @include pxRem(font-size, 21);
+    }
+
+    .dropdown-menu {
+      .dropdown-item a {
+        @include pxRem(font-size, 20);
+      }
+    }
+
+    .dropdown-split-menu {
+      .dropdown-item a {
+        @include pxRem(font-size, 20);
+      }
+    }
+  }
+}
+
+.dropdown-small {
+  .dropdown {
+    .btn-all {
+      @include pxRem(font-size, 13);
+    }
+
+    .dropdown-menu {
+      .dropdown-item a {
+        @include pxRem(font-size, 13);
+      }
+    }
+
+    .dropdown-split-menu {
+      .dropdown-item a {
+        @include pxRem(font-size, 13);
+      }
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-brand {
+    color: map-get($colors, color-background);
+    @include pxRem(margin, 0 10);
+    @include pxRem(font-size, 16);
+  }
+
+  .btn-all {
+    opacity: 0.7;
+  }
+}
+
+.un-dropdown {
+  li {
+    @include pxRem(font-size, 16);
+    @include pxRem(padding, 5 10);
+
+    a:hover {
+      color: map-get($colors, color-text);
+    }
+  }
+}
+
+.menu-item-un-dropdown {
+  li:not(:first-child):hover {
+    background-color: map-get($colors, bs-gray-200);
+  }
+}
+
+.menu-active-un-dropdown {
+  li:hover {
+    background-color: map-get($colors, bs-gray-200);
+  }
+
+  .active {
+    background-color: map-get($colors, primary-color);
+    color: map-get($colors, color-background);
+    pointer-events: none;
+    width: 100%;
+  }
+}
+
+.menu-disable-un-dropdown {
+  li:hover {
+    background-color: map-get($colors, bs-gray-200);
+  }
+
+  .disable {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+.alignment-option {
+  .dropdown {
+    @include pxRem(margin-top, 10);
+
+    .dropdown-menu-up {
+      @include pxRem(margin-top, 39);
+    }
+  }
+}
+
+.dropdown-form-all {
+  @include pxRem(padding, 40);
+}
+
+.dropdown-form {
+  @include pxRem(padding, 10 20);
+  border: 1px solid map-get($colors, color-border);
+
+  .form-dropdown {
+    @include pxRem(font-size, 16);
+
+    .form-control {
+      width: 100%;
+      @include pxRem(border-radius, 4);
+      border: 1px solid map-get($colors, color-border);
+      @include pxRem(padding, 3 10);
+    }
+  }
+
+  .form-check {
+    @include pxRem(margin-top, 10);
+
+    .form-check-input {
+      @include pxRem(margin, 8 10 0 0);
+    }
+  }
+
+  .dropdown-divider {
+    @include pxRem(margin, 20 -20 10);
+    border: 1px solid map-get($colors, color-border);
+    @include pxRem(height, 1);
+  }
+
+  .info-form {
+    flex-direction: column;
+    @include pxRem(margin, 0 -20);
+
+    a {
+      @include pxRem(padding, 0 20);
+    }
+
+    a:hover {
+      background-color: map-get($colors, bs-gray-200);
+      color: map-get($colors, color-text);
+    }
+  }
+}

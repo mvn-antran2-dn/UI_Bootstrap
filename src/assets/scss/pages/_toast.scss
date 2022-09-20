@@ -1,0 +1,125 @@
+.toast {
+  border: 1px solid map-get($map: $colors, $key: bs-gray-400);
+  @include pxRem(width, 30%);
+  align-items: center;
+  @include pxRem(border-radius, 3);
+  background-color: map-get($map: $colors, $key: color-background);
+  color: map-get($map: $colors, $key: color-text);
+  visibility: hidden;
+
+  .toast-header {
+    border-bottom: 1px solid map-get($map: $colors, $key: bs-gray-400);
+    @include pxRem(padding, 5 10);
+
+    img {
+      @include pxRem(width, 15%);
+    }
+
+    strong {
+      @include pxRem(margin-left, 5);
+      @include pxRem(font-size, 16);
+      opacity: 0.5;
+    }
+
+    .toast-header-left {
+      @include pxRem(width, 50%);
+      display: flex;
+      align-items: center;
+    }
+
+    .toast-header-right {
+      @include pxRem(width, 50%);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .btn-close::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    @include pxRem(font-size, 25);
+    @include pxRem(margin-left, 20);
+  }
+
+  .toast-body {
+    @include pxRem(padding, 10);
+    @include pxRem(font-size, 16);
+  }
+
+  .toast-footer {
+    border-top: 1px solid map-get($map: $colors, $key: bs-gray-400);
+    @include pxRem(padding, 10);
+
+    .btn-all {
+      @include pxRem(font-size, 16);
+    }
+  }
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+.show-toast {
+  visibility: visible;
+  position: fixed;
+  @include pxRem(bottom, 20);
+  @include pxRem(right, 40);
+}
+
+.live-ex-toast {
+  @include pxRem(height, 55);
+}
+
+.stacking {
+  .toast:last-child {
+    @include pxRem(margin-top, 20);
+  }
+}
+
+.color-toast {
+  .bg-primary:hover {
+    background-color: map-get($map: $colors, $key: primary-color);
+  }
+}
+.toast-placement-title{
+  @include pxRem(font-size, 16);
+  .form-select{
+    @include pxRem(padding,0 10);
+    @include pxRem(margin-bottom, 20);
+    border: 1px solid map-get($map: $colors, $key: bs-gray-400);
+  }
+}
+.toast-placement-content{
+  @include pxRem(height, 400);
+  width: 100%;
+  .toast{
+    @include pxRem(max-width,300);
+    width: 100%;
+  }
+}
+.position-relative{
+  position: relative;
+}
+.position-absolute{
+  position: absolute;
+}
+.top-0{
+  top: 0;
+}
+.top-50{
+  top: 38%;
+}
+.bottom-0{
+  bottom: 0;
+}
+.start-0{
+  left: 0;
+}
+.start-50{
+  left: 35%;
+}
+.end-0{
+  right: 0;
+}

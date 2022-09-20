@@ -1,0 +1,160 @@
+.tooltip {
+  position: relative;
+  @include pxRem(padding, 20);
+
+  .content-tooltip {
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+
+  &:hover {
+    .content-tooltip {
+      opacity: 1;
+
+      &.left {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.content-tooltip {
+  border: 1px solid map-get($map: $colors, $key: bs-gray-500);
+  @include pxRem(font-size, 16);
+  @include pxRem(width, 30%);
+  line-height: 1.5;
+  position: absolute;
+  background-color: map-get($map: $colors, $key: color-background);
+  top: -12%;
+  right: 52%;
+  @include pxRem(border-radius, 4);
+
+  &::before {
+    content: "";
+    border: 8px solid transparent;
+    border-right-color: map-get($map: $colors, $key: bs-gray-500);
+    right: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    border: 8px solid transparent;
+    border-right-color: map-get($map: $colors, $key: color-background);
+    right: 99.5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.top {
+    top: -46%;
+    right: 3%;
+    width: 90%;
+    text-align: center;
+    @include pxRem(padding, 10 0);
+
+    &::before {
+      position: absolute;
+      border: 8px solid transparent;
+      border-top-color: map-get($map: $colors, $key: bs-gray-500);
+      right: 50%;
+      top: 118%;
+    }
+
+    &::after {
+      position: absolute;
+      border: 8px solid transparent;
+      border-top-color: map-get($map: $colors, $key: color-background);
+      right: 50%;
+      top: 115%;
+    }
+  }
+
+  &.left {
+    top: 18%;
+    right: 95%;
+    width: 90%;
+    text-align: center;
+    @include pxRem(padding, 10 0);
+    visibility: hidden;
+
+    &::before {
+      position: absolute;
+      border: 8px solid transparent;
+      border-left-color: map-get($map: $colors, $key: bs-gray-500);
+      right: -12%;
+      top: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      border: 8px solid transparent;
+      border-left-color: map-get($map: $colors, $key: color-background);
+      right: -11%;
+      top: 50%;
+    }
+  }
+
+  &.bottom {
+    top: 81%;
+    right: 3%;
+    width: 90%;
+    text-align: center;
+    @include pxRem(padding, 10 0);
+    position: absolute;
+
+    &::before {
+      position: absolute;
+      border: 8px solid transparent;
+      border-bottom-color: map-get($map: $colors, $key: bs-gray-500);
+      right: 50%;
+      top: -18%;
+    }
+
+    &::after {
+      position: absolute;
+      border: 8px solid transparent;
+      border-bottom-color: map-get($map: $colors, $key: color-background);
+      right: 50%;
+      top: -15%;
+    }
+  }
+
+  &.right {
+    top: 18%;
+    left: 92%;
+    width: 90%;
+    text-align: center;
+    @include pxRem(padding, 10 0);
+
+    &::before {
+      position: absolute;
+      border: 8px solid transparent;
+      border-right-color: map-get($map: $colors, $key: bs-gray-500);
+      right: 100%;
+      top: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      border: 8px solid transparent;
+      border-right-color: map-get($map: $colors, $key: color-background);
+      right: 99%;
+      top: 50%;
+    }
+  }
+
+  &.svg-top {
+    width: 140%;
+    top: -32%;
+    left: -11.6%;
+  }
+
+  &.top-disable {
+    top: -44%;
+    left: 5%;
+  }
+}

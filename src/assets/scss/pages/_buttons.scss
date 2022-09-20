@@ -1,0 +1,6 @@
+.buttons {
+  .btn-buttons {
+    @include pxRem(margin-right, 10);
+    @include pxRem(font-size, 16);
+  }
+}

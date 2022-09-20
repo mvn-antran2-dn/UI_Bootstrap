@@ -1,0 +1,401 @@
+.bg-primary {
+  background-color: #116df6;
+  color: #fff;
+
+  &:hover {
+    background-color: #0b5ed7;
+  }
+}
+
+.bg-secondary {
+  background-color: #6c757d;
+  color: #fff;
+
+  &:hover {
+    background-color: #5c636a;
+  }
+}
+
+.bg-success {
+  background-color: #3b8755;
+  color: #fff;
+
+  &:hover {
+    background-color: #157347;
+  }
+}
+
+.bg-danger {
+  background-color: #dc3545;
+  color: #fff;
+
+  &:hover {
+    background-color: #bb2d3b;
+  }
+}
+
+.bg-warning {
+  background-color: #f8c146;
+
+  &:hover {
+    background-color: #ffca2c;
+  }
+}
+
+.bg-info {
+  background-color: #53cbf0;
+
+  &:hover {
+    background-color: #31d2f2;
+  }
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+
+  &:hover {
+    background-color: #f9fafb;
+  }
+}
+
+.bg-dark {
+  background-color: #212529;
+  color: #fff;
+
+  &:hover {
+    background-color: #1c1f23;
+  }
+}
+
+.bg-link {
+  background-color: map-get($colors, color-background);
+  color: map-get($colors, bs-blue);
+  text-decoration: underline;
+
+  &:hover {
+    color: #0a58ca;
+  }
+}
+
+///out-line
+.bg-outline-primary {
+  background-color: #fff;
+  color: #116df6;
+  border: 1px solid #116df6;
+
+  &:hover {
+    background-color: #116df6;
+    color: #fff;
+  }
+}
+
+.bg-outline-secondary {
+  background-color: #fff;
+  color: #6c757d;
+  border: 1px solid #6c757d;
+
+  &:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+}
+
+.bg-outline-success {
+  background-color: #fff;
+  color: #3b8755;
+  border: 1px solid #3b8755;
+
+  &:hover {
+    background-color: #3b8755;
+    color: #fff;
+  }
+}
+
+.bg-outline-danger {
+  background-color: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+
+  &:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+}
+
+.bg-outline-warning {
+  background-color: #fff;
+  color: #f8c146;
+  border: 1px solid #f8c146;
+
+  &:hover {
+    background-color: #f8c146;
+    color: black;
+  }
+}
+
+.bg-outline-info {
+  background-color: #fff;
+  color: #53cbf0;
+  border: 1px solid #53cbf0;
+
+  &:hover {
+    background-color: #53cbf0;
+    color: black;
+  }
+}
+
+.bg-outline-light {
+  background-color: #fff;
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+
+  &:hover {
+    background-color: #f8f9fa;
+    color: black;
+  }
+}
+
+.bg-outline-dark {
+  background-color: #fff;
+  color: #212529;
+  border: 1px solid #212529;
+
+  &:hover {
+    background-color: #212529;
+    color: #fff;
+  }
+}
+
+////not hover
+.bs-primary {
+  background-color: #116df6;
+  color: #fff;
+
+}
+
+.bs-secondary {
+  background-color: #6c757d;
+  color: #fff;
+
+}
+
+.bs-success {
+  background-color: #3b8755;
+  color: #fff;
+
+}
+
+.bs-danger {
+  background-color: #dc3545;
+  color: #fff;
+
+}
+
+.bs-warning {
+  background-color: #f8c146;
+
+}
+
+.bs-info {
+  background-color: #53cbf0;
+
+}
+
+.bs-light {
+  background-color: #f8f9fa;
+
+}
+
+.bs-dark {
+  background-color: #212529;
+  color: #fff;
+
+}
+
+//bs-bland
+// 
+.bs-bland-primary {
+  color: map-get($colors, primary-text-color);
+  background-color: map-get($colors, primary-bland-color);
+  border-color: #b6d4fe;
+}
+
+.bs-bland-secondary {
+  color: map-get($colors, secondary-text-color);
+  background-color: map-get($colors, secondary-bland-color);
+  border-color: #d3d6d8;
+}
+
+.bs-bland-success {
+  color: map-get($colors, success-text-color);
+  background-color: map-get($colors, success-bland-color);
+  border-color: #badbcc;
+}
+
+.bs-bland-danger {
+  color: map-get($colors, danger-text-color);
+  background-color: map-get($colors, danger-bland-color);
+  border-color: #f5c2c7;
+}
+
+.bs-bland-warning {
+  color: map-get($colors, warning-text-color);
+  background-color: map-get($colors, warning-bland-color);
+  border-color: #ffecb5;
+}
+
+.bs-bland-info {
+  color: map-get($colors, info-text-color);
+  background-color: map-get($colors, info-color);
+  border-color: #b6effb;
+}
+
+.bs-bland-light {
+  color: map-get($colors, light-text-color);
+  background-color: map-get($colors, light-bland-color)r;
+  border-color: #fdfdfe;
+}
+
+.bs-bland-dark {
+  color: map-get($colors, dark-text-color);
+  background-color: map-get($colors, dark-bland-color);
+  border-color: #bcbebf;
+}
+
+//bs-bland:hover//bs-bland
+.bs-bland-primary-hover {
+  color: map-get($colors, primary-text-color);
+  background-color: map-get($colors, primary-bland-color);
+  border-color: #b6d4fe;
+
+  &:hover {
+    color: map-get($colors, primary-text-color);
+    border-color: #b6d4fe;
+    background-color: #bacbe6;
+  }
+
+}
+
+.bs-bland-secondary-hover {
+  color: map-get($colors, secondary-text-color);
+  background-color: map-get($colors, secondary-bland-color);
+  border-color: #d3d6d8;
+
+  &:hover {
+    color: map-get($colors, secondary-text-color);
+    border-color: #d3d6d8;
+    background-color: #cbccce;
+  }
+
+}
+
+.bs-bland-success-hover {
+  color: map-get($colors, success-text-color);
+  background-color: map-get($colors, success-bland-color);
+  border-color: #badbcc;
+
+  &:hover {
+    color: map-get($colors, success-text-color);
+    border-color: #badbcc;
+    background-color: #bcd0c7;
+  }
+
+}
+
+.bs-bland-danger-hover {
+  color: map-get($colors, danger-text-color);
+  background-color: map-get($colors, danger-bland-color);
+  border-color: #f5c2c7;
+
+  &:hover {
+    color: map-get($colors, danger-text-color);
+    border-color: #f5c2c7;
+    background-color: #dfc2c4;
+  }
+
+}
+
+.bs-bland-warning-hover {
+  color: map-get($colors, warning-text-color);
+  background-color: map-get($colors, warning-bland-color);
+  border-color: #ffecb5;
+
+  &:hover {
+    color: map-get($colors, warning-text-color);
+    border-color: #ffecb5;
+    background-color: #e6dbb9;
+  }
+
+}
+
+.bs-bland-info-hover {
+  color: map-get($colors, info-text-color);
+  background-color: map-get($colors, info-color);
+  border-color: #b6effb;
+
+  &:hover {
+    color: map-get($colors, info-text-color);
+    border-color: #b6effb;
+    background-color: #badce3;
+  }
+
+}
+
+.bs-bland-light-hover {
+  color: map-get($colors, light-text-color);
+  background-color: map-get($colors, light-bland-color)r;
+  border-color: #fdfdfe;
+
+  &:hover {
+    color: map-get($colors, light-text-color);
+    border-color: #fdfdfe;
+    background-color: #e5e5e5;
+  }
+
+}
+
+.bs-bland-dark-hover {
+  color: map-get($colors, dark-text-color);
+  background-color: map-get($colors, dark-bland-color);
+  border-color: #bcbebf;
+
+  &:hover {
+    color: map-get($colors, dark-text-color);
+    border-color: #bcbebf;
+    background-color: #bebebf;
+  }
+
+}
+
+.text-primary {
+  color: map-get($colors, primary-color);
+  opacity: 1;
+}
+
+.text-secondary {
+  color: map-get($colors, secondary-color);
+}
+
+.text-success {
+  color: map-get($colors, success-color);
+}
+
+.text-danger {
+  color: map-get($colors, danger-color);
+}
+
+.text-warning {
+  color: map-get($colors, warning-color);
+}
+
+.text-info {
+  color: map-get($colors, info-color);
+}
+
+.text-light {
+  color: map-get($colors, light-color);
+}
+
+.text-dark {
+  color: map-get($colors, dark-color);
+}

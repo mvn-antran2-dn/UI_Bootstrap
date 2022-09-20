@@ -1,0 +1,129 @@
+.list-group {
+  margin: 0;
+
+  .active {
+    background-color: map-get($colors, primary-color);
+    color: map-get($colors, color-background);
+  }
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
+
+.list-group-link {
+  display: flex;
+  flex-direction: column;
+
+  .list-group-item {
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:hover:not(.active) {
+      color: map-get($colors, color-text);
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  }
+
+  .active {
+    background-color: map-get($colors, primary-color);
+    color: map-get($colors, color-background);
+  }
+
+}
+
+.list-group-flush {
+  .list-group-item {
+    border: unset;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid map-get($colors, color-border);
+    }
+  }
+}
+
+.list-group-numbered {
+  counter-reset: increment;
+
+  &>li::before {
+    counter-increment: increment;
+    content: counter(increment) ". ";
+  }
+
+  .list-group-item {
+    .text-bold {
+      font-weight: map-get($font-weight, font-medium);
+    }
+
+    .badge {
+      @include pxRem(height, 22);
+      @include pxRem(font-size, 14);
+      @include pxRem(padding, 0 8);
+      @include pxRem(border-radius, 15);
+      @include pxRem(margin-top, 5);
+      line-height: 1.6;
+    }
+  }
+}
+
+.contextual-classes {
+  .list-group-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+}
+
+.contextual-classes-action {
+  display: flex;
+  flex-direction: column;
+
+  .list-group-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .list-group-item-action-none-bg:hover {
+    color: map-get($colors, bs-gray-700);
+    background-color: map-get($colors, bs-light);
+  }
+}
+
+.with-badges {
+  .badge {
+    @include pxRem(height, 22);
+    @include pxRem(font-size, 14);
+    @include pxRem(padding, 0 8);
+    @include pxRem(border-radius, 15);
+    line-height: 1.6;
+  }
+}
+
+.custom-content {
+  flex-direction: column;
+
+  .list-group-item.active {
+    h5 {
+      color: map-get($colors, color-background);
+    }
+
+    &:hover {
+      background-color: map-get($colors, primary-color);
+      color: map-get($colors, color-background);
+    }
+  }
+
+  .list-group-item:hover {
+    color: map-get($colors, bs-gray-700);
+    background-color: map-get($colors, bs-light);
+  }
+}
+
+.checkbox-radio {
+  .form-check-input {
+    @include pxRem(margin-right, 10);
+  }
+}

@@ -1,0 +1,747 @@
+.card {
+  border: 1px solid map-get($colors, secondary-bland-color);
+  width: 18rem;
+
+  .card-header,
+  .card-footer {
+    @include pxRem(padding, 0 20);
+    border: 1px solid map-get($colors, secondary-bland-color);
+    background-color: rgba(0, 0, 0, 0.03);
+    @include pxRem(font-size, 18);
+    font-weight: map-get($font-weight, font-regular);
+  }
+
+  .card-body {
+    @include pxRem(padding, 0 20);
+
+    h4 {
+      opacity: 0.6;
+    }
+
+    p {
+      @include pxRem(font-size, 16);
+    }
+
+    .card-link-btn {
+      @include pxRem(margin, 10 0);
+    }
+
+    .card-link {
+      color: map-get($colors, primary-color);
+      text-decoration: underline;
+      @include pxRem(margin-right, 20);
+      @include pxRem(font-size, 16);
+
+      &:hover {
+        color: map-get($colors, primary-color-hover);
+      }
+    }
+
+    .btn-card:hover {
+      color: map-get($colors, color-background);
+    }
+
+    .text-muted {
+      opacity: 0.8;
+      @include pxRem(font-size, 15);
+    }
+  }
+}
+
+.list-group {
+  @include pxRem(margin, 10 -20);
+  @include pxRem(font-size, 16);
+
+  .list-header {
+    @include pxRem(padding, 0 20);
+    border: 1px solid map-get($colors, secondary-bland-color);
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .list-group-item {
+    @include pxRem(padding, 0 20);
+    border: 1px solid map-get($colors, secondary-bland-color);
+  }
+
+  .list-footer {
+    background-color: rgba(0, 0, 0, 0.03);
+    @include pxRem(padding, 0 20);
+    border: 1px solid map-get($colors, secondary-bland-color);
+  }
+}
+
+.example {
+  .card-body {
+
+    h2,
+    .card-link,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+}
+
+.body {
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    h2,
+    h4,
+    .card-link-btn,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+
+    p {
+      @include pxRem(padding, 20 0);
+    }
+  }
+}
+
+.title-text-link {
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .btn-card,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.images {
+  .card-body {
+
+    h2,
+    h4,
+    .card-link-btn,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+
+    p {
+      @include pxRem(padding, 20 0);
+    }
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+}
+
+.list-not-header-footer {
+  .card {
+    border: unset;
+  }
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    h2,
+    h4,
+    .card-link-btn,
+    p,
+    .text-muted {
+      display: none;
+    }
+
+    .list-group {
+
+      .list-header,
+      .list-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+.list-not-header {
+  .card {
+    border: unset;
+  }
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    h2,
+    h4,
+    .card-link-btn,
+    p,
+    .text-muted {
+      display: none;
+    }
+
+    .list-group {
+      .list-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+.list-not-footer {
+  .card {
+    border: unset;
+  }
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    h2,
+    h4,
+    .card-link-btn,
+    p,
+    .text-muted {
+      display: none;
+    }
+
+    .list-group {
+      .list-header {
+        display: none;
+      }
+    }
+  }
+}
+
+.kitchen {
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    h2,
+    .btn-card,
+    .list-header,
+    .list-footer,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.header-footer-not-footer {
+  .card {
+    width: 100%;
+  }
+
+  .card-header {
+    .card-header-tabs {
+      display: none;
+    }
+  }
+
+  img,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.header-footer-not-footer-btn {
+  .card {
+    width: 100%;
+  }
+
+  .card-header {
+    .card-header-tabs {
+      display: none;
+    }
+  }
+
+  img,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link-btn,
+    p,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.header-footer {
+  .card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-header {
+    .card-header-tabs {
+      display: none;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+
+    .card-link-btn {
+      justify-content: center;
+    }
+  }
+
+  .card-footer {
+    opacity: 0.6;
+  }
+}
+
+.using-grid-markup {
+  .card {
+    width: 95%;
+  }
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.using-utilities {
+  .card {
+    width: 100%;
+  }
+
+  img,
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  .card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-header {
+    @include pxRem(padding, 10 10 0 10);
+
+    .header-title {
+      display: none;
+    }
+
+    .card-header-tabs a {
+      @include pxRem(font-size, 18);
+      @include pxRem(padding, 5 10);
+    }
+
+    .bg-primary {
+      background-color: map-get($colors, color-background);
+      color: map-get($colors, color-text);
+      border: 1px solid map-get($colors, secondary-bland-color);
+      border-bottom: 1px solid map-get($colors, color-background);
+    }
+
+    .bg-link {
+      background-color: rgba(0, 0, 0, 0);
+      text-decoration: unset;
+      border: 1px solid rgba(0, 0, 0, 0);
+
+      &:hover {
+        border: 1px solid map-get($colors, secondary-bland-color);
+      }
+    }
+  }
+
+  img,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+
+    .card-link-btn {
+      justify-content: center;
+    }
+  }
+
+  .card-footer {
+    opacity: 0.6;
+  }
+}
+
+.navigation-primary {
+  @include pxRem(margin-top, 30);
+
+  .card-header {
+    @include pxRem(padding, 10 10);
+
+    .card-header-tabs a {
+      @include pxRem(font-size, 18);
+    }
+
+    .bg-primary {
+      background-color: map-get($colors, primary-color);
+      color: map-get($colors, color-background);
+      border: 1px solid map-get($colors, primary-color);
+      border-bottom: 1px solid map-get($colors, primary-color);
+    }
+
+    .bg-link {
+      &:hover {
+        border: 1px solid rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+.images-caps {
+  .card {
+    width: 100%;
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+
+    .card-link,
+    h4,
+    .list-group,
+    .btn-card {
+      display: none;
+    }
+
+    .card-link-btn {
+      justify-content: center;
+    }
+  }
+
+  .card-footer {
+    opacity: 0.6;
+  }
+}
+
+.images-caps-bottom {
+  @include pxRem(margin-top, 30);
+
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.images-overlays {
+  position: relative;
+
+  .card {
+    width: 100%;
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+    position: absolute;
+    @include pxRem(top, 20);
+    color: map-get($colors, color-background);
+
+    .card-link,
+    h4,
+    .list-group,
+    .btn-card {
+      display: none;
+    }
+
+    h2 {
+      color: map-get($colors, color-background);
+    }
+
+    .card-link-btn {
+      justify-content: center;
+    }
+  }
+
+  .card-footer {
+    opacity: 0.6;
+  }
+}
+
+.images-horizontal {
+  .card {
+    width: 70%;
+    display: flex;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+
+  .card-body {
+    h2 {
+      color: map-get($colors, color-text);
+    }
+
+    .card-link,
+    h4,
+    .list-group,
+    .btn-card {
+      display: none;
+    }
+
+    .card-link-btn {
+      justify-content: center;
+    }
+  }
+
+  .card-footer {
+    opacity: 0.6;
+  }
+}
+
+.bg-color:not(:first-child) {
+  @include pxRem(margin-top, 30);
+}
+
+.bg-and-color {
+  width: 18rem;
+
+  .card-header {
+    border: unset;
+
+    .card-header-tabs {
+      display: none;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  .card-footer {
+    visibility: hidden;
+  }
+
+  .card-body {
+    border-top: 1px solid map-get($colors, color-border);
+
+    .card-link-btn,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+
+  &:not(.bg-warning, .bg-info, .bg-light) {
+    h2 {
+      color: map-get($colors, color-background);
+    }
+  }
+}
+
+.bg-and-color-outline {
+  pointer-events: none;
+  .card-header {
+    color: map-get($colors, color-text);
+    border-bottom: 1px solid map-get($colors, secondary-color);
+    border: unset;
+  }
+
+  .card-body {
+    h2 {
+      color: map-get($colors, color-text);
+    }
+
+    .card-link-btn,
+    h4,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+  }
+
+  &.bg-outline-light {
+    color: map-get($colors, color-text);
+  }
+}
+
+.Mixin-utilities {
+  .card-body {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+    h2 {
+      color: map-get($colors, color-success-dark);
+    }
+  }
+
+  .card-footer {
+    visibility: visible;
+    color: map-get($colors, color-text);
+    border: unset;
+  }
+}
+
+.card-groups {
+  display: flex;
+
+  .card {
+    width: 33.3%;
+  }
+
+  .card-body {
+
+    h4,
+    .card-link-btn,
+    .list-group {
+      display: none;
+    }
+
+    .text-muted {
+      @include pxRem(font-size, 16);
+    }
+
+    p {
+      @include pxRem(padding, 20 0);
+    }
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+}
+
+.card-groups-bottom {
+
+  .card-body {
+
+    .text-muted {
+      background-color: rgba(0, 0, 0, 0.03);
+      @include pxRem(margin, 0 -20);
+      @include pxRem(padding, 0 20);
+      border-top: 1px solid map-get($colors, color-border);
+    }
+  }
+}
+
+.grid-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    width: 31.4%;
+    @include pxRem(margin, 0 10 10 10);
+  }
+
+  .card-body {
+
+    h4,
+    .card-link-btn,
+    .list-group,
+    .text-muted {
+      display: none;
+    }
+
+    p {
+      @include pxRem(padding, 20 0);
+    }
+  }
+
+  .card-header,
+  .card-footer {
+    display: none;
+  }
+}

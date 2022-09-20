@@ -1,0 +1,95 @@
+.accordion {
+  .accordion-item {
+    position: relative;
+    @include pxRem(border, 1 solid map-get($colors, bs-gray-400));
+    @include pxRem(border-radius, 4);
+  }
+
+  .accordion-item:nth-child(2),
+  .accordion-item:nth-child(3) {
+    border-top: none;
+  }
+
+  .accordion-item:nth-child(1),
+  .accordion-item:nth-child(2) {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+
+  .accordion-item:nth-child(2),
+  .accordion-item:nth-child(3) {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+  }
+
+  .accordion-item.active {
+    .accordion-body {
+      @include pxRem(height, 200);
+      @include pxRem(padding, 16);
+    }
+
+    .accordion-header {
+      color: map-get($map: $colors, $key: primary-color);
+      background-color: map-get($map: $colors, $key: bs-cyan );
+    }
+
+    .accordion-header::before {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+
+  .accordion-header {
+    font: inherit;
+    position: relative;
+    @include pxRem(padding, 10);
+    cursor: pointer;
+    @include pxRem(font-size, 16);
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f078";
+      @include pxRem(width, 16);  
+      @include pxRem(right, 20);
+      @include pxRem(font-size, 16);
+      transition: transform 0.2s ease-in-out;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: 100%;
+    }
+  }
+
+  .accordion-body {
+    position: relative;
+    height: 0;
+    @include pxRem(padding, 0 16);
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    @include pxRem(font-size, 16);
+
+    span {
+      color: map-get($colors, bs-pink);
+    }
+  }
+}
+
+.accordion-flush {
+  background-color: map-get($map: $colors, $key: color-background );
+
+  .accordion-item {
+    border: unset;
+    background-color: map-get($map: $colors, $key: color-background);
+  }
+
+  .accordion-item.active {
+    .accordion-header {
+      @include pxRem(border-bottom, 1 solid map-get($colors, bs-gray-400));
+    }
+  }
+
+  .accordion-body {
+    @include pxRem(border-bottom, 1 solid map-get($colors, bs-gray-400));
+  }
+}

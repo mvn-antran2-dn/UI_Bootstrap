@@ -1,0 +1,66 @@
+.progress {
+  background-color: map-get($colors, secondary-bland-color);
+  display: flex;
+  @include pxRem(height, 16);
+  @include pxRem(font-size, 12);
+  overflow: hidden;
+  @include pxRem(border-radius, 4);
+
+
+  .text-progress {
+    color: map-get($colors, color-background);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .progress-bar-stripes {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    @include pxRem(background-size, 16 16);
+  }
+
+  &:not(:last-child) {
+    @include pxRem(margin-bottom, 10);
+  }
+}
+
+.progress-bar {
+  width: 0;
+  background-color: map-get($colors, primary-color);
+  height: 100%;
+  @include pxRem(border-radius, 4);
+  color: white;
+  text-align: center;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  &:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.progress-bar-animated {
+  animation: stripes-animation 20s linear infinite;
+}
+
+@keyframes stripes-animation {
+  0% {
+    background-position: 50%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.progress-bt {
+  @include pxRem(margin-top, 30);
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-25 {
+  width: 25%;
+}

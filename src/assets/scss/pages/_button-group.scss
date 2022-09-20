@@ -1,0 +1,157 @@
+.btn-group {
+  .btn-all {
+    @include pxRem(font-size, 18);
+  }
+
+  button:first-child {
+    border-radius: unset;
+    @include pxRem(border-top-left-radius, 4);
+    @include pxRem(border-bottom-left-radius, 4);
+  }
+
+  button:nth-child(2) {
+    border-radius: unset;
+  }
+
+  button:last-child {
+    border-radius: unset;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+  }
+
+  .active {
+    background-color: map-get($colors, primary-text-color);
+    pointer-events: none;
+  }
+
+  &.btn-group-lg {
+    @include pxRem(margin-bottom, 20);
+
+    .btn-all {
+      @include pxRem(font-size, 22);
+    }
+  }
+
+  &.btn-group-sm {
+    @include pxRem(margin-top, 20);
+
+    .btn-all {
+      @include pxRem(font-size, 15);
+    }
+  }
+
+  &.btn-group-dropdown {
+    .un-dropdown {
+      @include pxRem(font-size, 21);
+      @include pxRem(padding-bottom, 2);
+    }
+
+    .dropdown button:first-child {
+      border-radius: unset;
+      @include pxRem(border-top-right-radius, 4);
+      @include pxRem(border-bottom-right-radius, 4);
+    }
+  }
+
+  &.btn-group-vertical {
+    flex-direction: column;
+    width: 11.4%;
+
+    button {
+      border-radius: unset;
+    }
+
+    .first-column {
+      border-radius: unset;
+      @include pxRem(border-top-left-radius, 4);
+      @include pxRem(border-top-right-radius, 4);
+    }
+
+    .last-column {
+      border-radius: unset;
+      @include pxRem(border-bottom-right-radius, 4);
+      @include pxRem(border-bottom-left-radius, 4);
+    }
+  }
+}
+
+.cb-radio-btn-gr {
+  position: relative;
+
+  .btn-check {
+    position: absolute;
+    pointer-events: none;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  label:nth-child(2) {
+    border-radius: unset;
+    @include pxRem(border-top-left-radius, 4);
+    @include pxRem(border-bottom-left-radius, 4);
+  }
+
+  label:nth-child(4) {
+    border-radius: unset;
+  }
+
+  label:last-child {
+    border-radius: unset;
+    @include pxRem(border-top-right-radius, 4);
+    @include pxRem(border-bottom-right-radius, 4);
+  }
+
+  .bg-primary {
+    color: map-get($colors, color-background);
+    @include pxRem(font-size, 18);
+    @include pxRem(padding, 1 9);
+    @include pxRem(margin-bottom, 5);
+  }
+
+  .active {
+    color: map-get($colors, color-background);
+    background-color: map-get($colors, primary-color);
+    pointer-events: all;
+  }
+}
+
+.btn-toolbar {
+  &.mb-3:last-child {
+    @include pxRem(margin-top, 20);
+  }
+
+  .first-group {
+    button:nth-child(3) {
+      border-radius: unset;
+    }
+  }
+
+  .me-2 {
+    @include pxRem(margin-right, 10);
+  }
+
+  .third-group {
+    button {
+      @include pxRem(border-radius, 4);
+    }
+  }
+
+  .input-group {
+    .input-group-text {
+      border-radius: unset;
+      @include pxRem(border-top-left-radius, 4);
+      @include pxRem(border-bottom-left-radius, 4);
+      background-color: map-get($colors, bs-gray-300);
+      @include pxRem(font-size, 19);
+      @include pxRem(padding, 0 10);
+      border: 1px solid map-get($colors, color-border);
+    }
+
+    .form-control {
+      border-radius: unset;
+      @include pxRem(border-top-right-radius, 4);
+      @include pxRem(border-bottom-right-radius, 4);
+      border: 1px solid map-get($colors, color-border);
+      @include pxRem(font-size, 16);
+    }
+  }
+}

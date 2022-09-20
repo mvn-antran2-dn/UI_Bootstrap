@@ -1,0 +1,69 @@
+.content-all {
+  @include pxRem(border, 1 solid map-get($colors, info-color));
+  @include pxRem(box-shadow, 10 10 map-get($colors, info-bland-color));
+  @include pxRem(padding, 10 10);
+  @include pxRem(border-radius, 5);
+  line-height: 2;
+
+  .badge-heading {
+    background-color: map-get($colors, bs-gray);
+    @include pxRem(padding, 0 5);
+    color: map-get($colors, color-background);
+    @include pxRem(border-radius, 3);
+  }
+
+  .btn-badge {
+    @include pxRem(margin, 20 20);
+    @include pxRem(padding, 4 20 2);
+    background-color: map-get($colors, bs-primary);
+    color: map-get($colors, color-background);
+    border: unset;
+    @include pxRem(border-radius, 3);
+    @include pxRem(font-size, 16);
+    position: relative;
+
+    .badge-btn {
+      background-color: map-get($colors, bs-gray);
+      @include pxRem(padding, 0 8);
+      color: map-get($colors, color-background);
+      @include pxRem(border-radius, 5);
+    }
+
+    .badge-positioned {
+      background-color: map-get($colors, color-primary);
+      @include pxRem(border-radius, 13);
+      @include pxRem(padding, 0 9);
+      position: absolute;
+      @include pxRem(font-size, 12);
+      @include pxRem(top, -58);
+    }
+
+    .badge-positioned-hidden {
+      display: none;
+    }
+
+    .profile {
+      @include pxRem(height, 20);
+      @include pxRem(right, -10);
+      @include pxRem(border, 1 solid map-get($colors, color-background));
+    }
+
+    &:hover {
+      background-color: map-get($colors, bs-blue);
+    }
+  }
+
+  .badge-bg-color {
+    @include pxRem(padding, 2 8);
+    @include pxRem(border-radius, 5);
+    @include pxRem(margin, 20 5 10);
+  }
+
+  .pill-badges {
+    @include pxRem(border-radius, 13);
+  }
+}
+
+.badge-positioned {
+  @include pxRem(margin-top, 50);
+}
