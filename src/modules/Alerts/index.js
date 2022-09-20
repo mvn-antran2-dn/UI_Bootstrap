@@ -160,7 +160,7 @@ export default function Alerts() {
       <h2>Dismissing</h2>
       <div className="container">
         <div className="content-all dismissing">
-          <AlertCP colors={"warning"} >
+          <AlertCP  >
             <span><strong>Holy guacamole!</strong> You should check in on some of those
             fields below.</span>
           </AlertCP>
